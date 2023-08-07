@@ -1,0 +1,96 @@
+@import "../../../styles/Variaveis";
+
+aside {
+    display: flex;
+    max-width: 450px;
+    background-color: $cinzaEscuro;
+    padding: 20px 0px 35px 0px;
+    flex-direction: column;
+    align-items: center;
+
+
+    .perfil {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+
+        img {
+            width: 260px;
+            height: 260px;
+        }
+
+        &__Descricao {
+            display: flex;
+            flex-direction: column;
+            font-family: $font;
+            text-align: left;
+            gap: 5px;
+            h1 {
+                font-size: 30px;
+                color: $begeClaro;
+                font-weight: 300;
+                font-style: italic;
+            }
+
+            h2 {
+                font-size: 20px;
+                color: $begeClaro;
+                font-weight: 300;
+                font-style: italic;
+            }
+
+            p {
+                color: $cinzaClaro;
+            }
+        }
+
+        &__Numeros {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+                display: flex;
+                font-family: $font;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 300;
+                color: $begeClaro;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        &__Complementos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            span {
+                width: 100%;
+                display: flex;
+                gap: 10px;
+                font-size: 28px;
+                color: $begeClaro;
+                font-family: $font;
+                font-style: italic;
+                font-weight: 300;
+            }
+        }
+        button {
+            background-color: $begeClaro;
+            border-radius: 5px;
+            width: 192px;
+            height: 50px;
+            border: none;
+            font-family: $font;
+            font-size: 18px;
+            font-style: italic;
+            color: $cinzaClaro;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+    }
+}

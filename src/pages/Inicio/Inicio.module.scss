@@ -1,0 +1,69 @@
+@import "../../styles/Variaveis";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: center;
+
+    background-color: $bege;
+
+    h1 {
+        font-weight: 300;
+        font-family: $font;
+        font-style: italic;
+        font-size: 40px;
+
+        color: $cinzaEscuro;
+    }
+
+    &__search {
+        display: flex;
+
+        input {
+            width: 400px;
+            height: 50px;
+
+            padding: 10px;
+
+            border-radius: 5px;
+            border: 1px solid $cinzaEscuro;
+            outline: none;
+
+            color: $cinzaClaro;
+            background-color: $branco;
+
+            font-family: $font;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            width: 118px;
+            height: 50px;
+
+            border-radius: 5px;
+            border: none;
+
+            background-color: $cinza;
+            color: $begeClaro;
+
+            font-weight: 300;
+            font-family: $font;
+            font-style: italic;
+            font-size: 22px;
+
+            cursor: pointer;
+        }
+    }
+}

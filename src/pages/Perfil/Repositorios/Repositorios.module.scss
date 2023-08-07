@@ -1,0 +1,44 @@
+@import "../../../styles/Variaveis";
+
+.repositorios {
+    overflow-y: scroll;
+    width: 100%;
+    background-color: $bege;
+    padding: 30px 50px;
+    font-family: $font;
+
+    article {
+        padding: 15px;
+        border-bottom: 1px solid $begeClaro;
+
+        h1 {
+            color: $cinzaEscuro;
+            font-size: 24px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 34px;
+        }
+
+        p {
+            color: $cinzaEscuro;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 28px;
+            font-style: italic;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            color: $cinzaClaro;
+            gap: 5px;
+            p {
+                color: $cinzaClaro;
+                font-size: 20px;
+                font-style: italic;
+                line-height: 26px;
+                text-align: left;
+            }
+        }
+    }
+}
