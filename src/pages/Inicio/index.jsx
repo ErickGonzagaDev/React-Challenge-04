@@ -19,7 +19,7 @@ import { userContext } from "../../context/User";
 import { Link } from "react-router-dom";
 
 const Inicio = () => {
-    const { handleChange,buscar } = useContext(userContext);
+    const { handleChange,buscar,nome } = useContext(userContext);
 
     return (
         <main className={styles.container}>
@@ -29,6 +29,7 @@ const Inicio = () => {
                 <section className={styles.container__search}>
                     <input
                         type="text"
+                        value={nome}
                         placeholder="Type the username here..."
                         onChange={handleChange}
                     />

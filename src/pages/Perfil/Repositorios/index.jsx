@@ -2,7 +2,7 @@
 // |         Import Padrão           |
 // ***********************************
 
-import React from "react";
+import React, { useContext} from "react";
 
 // ***********************************
 // |          Import Css             |
@@ -15,107 +15,26 @@ import styles from "./Repositorios.module.scss";
 // ***********************************
 
 import { AiOutlineStar } from "react-icons/ai";
+import { userContext } from "../../../context/User";
 
 const Repositorios = () => {
+    const { repositorios } = useContext(userContext);
+
     return (
         <section className={styles.repositorios}>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar size={15}/>
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
-            <article>
-                <h1>Repository Name</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    tincidunt congue ligula in rutrum. Morbi nec lacus
-                    condimentum, hendrerit mi eu, feugiat.
-                </p>
-                <span>
-                    <AiOutlineStar />
-                    <p>100 Stars • Updated 30 days ago</p>
-                </span>
-            </article>
+            { repositorios.map((repositorio) => (
+                <article key={repositorio.name}>
+                    <h1>{repositorio.name}</h1>
+                    <p>{repositorio.description}</p>
+                    <span>
+                        <AiOutlineStar size={15} />
+                        <p>
+                            {repositorio.stargazers_count} Stars • Last update 
+                            {repositorio.updated_at}
+                        </p>
+                    </span>
+                </article>
+            ))}
         </section>
     );
 };

@@ -12,7 +12,10 @@ import styles from "./Perfil.module.scss";
 import Aside from "./Aside";
 import Repositorios from "./Repositorios";
 
+
 const Perfil = () => {
+
+
     return (
         <main className={styles.container}>
             <Aside />

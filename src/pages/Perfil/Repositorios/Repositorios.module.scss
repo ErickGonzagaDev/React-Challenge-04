@@ -2,12 +2,15 @@
 
 .repositorios {
     overflow-y: scroll;
-    width: 100%;
     background-color: $bege;
     padding: 30px 50px;
     font-family: $font;
+    width: 70%;
+    height: 100vh;
+
 
     article {
+        width: 100%;
         padding: 15px;
         border-bottom: 1px solid $begeClaro;
 

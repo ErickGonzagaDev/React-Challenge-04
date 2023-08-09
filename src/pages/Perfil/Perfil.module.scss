@@ -2,7 +2,8 @@
 
 .container {
     display: flex;
+    width: 100%;
     color: $bege;
     height: 100vh;
-
+    flex-wrap: wrap;
 }
